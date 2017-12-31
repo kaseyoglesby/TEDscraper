@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Search Talks</h1>
+  <div>
+    <p>
+      {{ talksCount }} total talks in DB
+    </p>
+  </div>
+  <form method="post">
+    <div>
+    <label>
+      Search term:
+      <input type="text" name="term" value="" />
+    </label>
+    </div>
+    <input type="submit" value="Import" />
+  </div>
+</form>
+
+{% if hasResults %}
+  {% for talk in results %}
+    <div>
+      <p>{{talk['title']}} - {{talk['author']}}</p>
+    </div>
+    {% else %}
+    <div>
+    <p>No results to display</p>
+    </div>
+  {% endfor %}
+{% endif %}
+
+{% endblock %}

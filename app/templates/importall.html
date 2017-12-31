@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Batch Importer</h1>
+  <div>
+  <p>This will attempt to import 100 URLs into the database.</p>
+  <p>Are you SURE you want to continue?</p>
+  </div>
+  <form method='POST'>
+    <input type="submit" value="IMPORT ALL" />
+  </form>
+
+
+{% endblock %}

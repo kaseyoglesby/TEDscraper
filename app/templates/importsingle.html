@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>TED Talk search</h1>
+  <form method="post">
+    <div>
+    <label>
+      URL for imported talk:
+      <input type="text" name="url" value="" />
+    </label>
+    </div>
+    <input type="submit" value="Import" />
+  </div>
+</form>
+{% endblock %}
